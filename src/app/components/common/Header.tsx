@@ -1,9 +1,19 @@
+"use client";
+
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const Header: React.FC = () => {
+  const router = useRouter();
+
   return (
-    <header className="w-full p-4 flex md:justify-start items-center bg-dark">
+    <header
+      className="w-full p-4 flex md:justify-start items-center bg-dark cursor-pointer"
+      onClick={() => {
+        router.push("/");
+      }}
+    >
       <Image
         src="/logo.jpg"
         alt="ロゴ"

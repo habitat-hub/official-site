@@ -3,10 +3,18 @@ import Image from "next/image";
 
 const PortfolioList: React.FC = () => {
   const portfolios = [
-    { title: "Project One", imageUrl: "/background.jpeg" },
-    { title: "Project Two", imageUrl: "/background.jpeg" },
-    { title: "Project Three", imageUrl: "/background.jpeg" },
-    { title: "Comming Soon ...", imageUrl: "/background.jpeg" },
+    {
+      title: "Daydule",
+      imageUrl: "/daydule_icon.png",
+      href: "/portfolio/daydule",
+    },
+    {
+      title: "Time is Money",
+      imageUrl: "/time-is-money_icon.png",
+      href: "/portfolio/time-is-money",
+    },
+    { title: "Coming Soon ...", imageUrl: "/background.jpeg" },
+    { title: "Coming Soon ...", imageUrl: "/background.jpeg" },
   ];
 
   return (
@@ -22,8 +30,8 @@ const PortfolioList: React.FC = () => {
         {portfolios.map((portfolio, index) => (
           <a
             key={index}
-            href="/"
-            className="group block relative w-full h-0 pb-[100%] overflow-hidden"
+            href={portfolio.href || undefined}
+            className="group block relative w-full h-0 pb-[100%] overflow-hidden rounded-3xl"
           >
             <Image
               src={portfolio.imageUrl}
