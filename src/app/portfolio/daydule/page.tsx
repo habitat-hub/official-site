@@ -1,12 +1,13 @@
-import PortfolioLayout from "@/app/components/portfolio/PortfolioLayout";
+import PortfolioTemplate from "@/app/components/portfolio/PortfolioTemplate";
 
 export default function DaydulePortfolio() {
   return (
-    <PortfolioLayout
+    <PortfolioTemplate
       mainVisualUrl="/daydule_home.png"
       title="Daydule"
       releaseDate="2023/09"
       siteUrl="https://daydule.habitat-hub.com/main"
+      enabledDevice={["PC"]}
       siteImageUrls={[
         "/daydule_site_1.png",
         "/daydule_site_2.png",

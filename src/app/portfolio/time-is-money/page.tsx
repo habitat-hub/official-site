@@ -1,12 +1,13 @@
-import PortfolioLayout from "@/app/components/portfolio/PortfolioLayout";
+import PortfolioTemplate from "@/app/components/portfolio/PortfolioTemplate";
 
 export default function TimeIsMoneyPortfolio() {
   return (
-    <PortfolioLayout
+    <PortfolioTemplate
       mainVisualUrl="/time-is-money_home.png"
       title="Time is Money"
       releaseDate="2024/03"
       siteUrl="https://time-is-money.habitat-hub.com/main"
+      enabledDevice={["PC"]}
       siteImageUrls={["/time-is-money_site_1.png", "/time-is-money_site_2.png"]}
       description={`TimeIsMoneyは、自身の時間を金銭的な観点から捉えることができるサービスです。<br/>
       ユーザーは年収、月収、または時給を入力し、自身の稼働時間を記録します。
