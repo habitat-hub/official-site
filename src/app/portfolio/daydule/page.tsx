@@ -3,7 +3,7 @@ import PortfolioTemplate from "@/components/portfolio/PortfolioTemplate";
 export default function DaydulePortfolio() {
   return (
     <PortfolioTemplate
-      mainVisualUrl="/daydule_home.png"
+      mainVisualUrl="/portfolio/daydule/daydule_home.png"
       title="Daydule"
       releaseDate="2023/09"
       siteUrl="https://daydule.habitat-hub.com/main"
