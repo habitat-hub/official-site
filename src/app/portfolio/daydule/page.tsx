@@ -1,4 +1,4 @@
-import PortfolioTemplate from "@/app/components/portfolio/PortfolioTemplate";
+import PortfolioTemplate from "@/components/portfolio/PortfolioTemplate";
 
 export default function DaydulePortfolio() {
   return (
