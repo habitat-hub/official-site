@@ -1,44 +1,49 @@
 import React from "react";
 import MemberCard from "./MemberCard";
 
-export type Member = {
+export type MemberInformation = {
   name: string;
-  role: string;
   imageUrl: string;
-  details: { title: string; description: string }[];
+  details: { title: string; description: string; url?: string }[];
 };
 
-const members: Member[] = [
+const memberInformationList: MemberInformation[] = [
   {
     name: "mellbrother",
-    role: "Designer",
     imageUrl: "/background.jpeg",
     details: [
-      { title: "自己紹介", description: "User Experience Design" },
+      { title: "Role", description: "User Experience Design" },
       { title: "経歴", description: "App redesign, Website overhaul" },
       { title: "スキルセット", description: "Sketch, Figma, Adobe XD" },
     ],
   },
   {
     name: "tom-takeru",
-    role: "Developer",
-    imageUrl: "/background.jpeg",
+    imageUrl: "/memberImage/tom-takeru.jpeg",
     details: [
-      { title: "自己紹介", description: "Frontend Development" },
+      { title: "Role", description: "Full Stack Developer / Project Manager" },
       {
-        title: "経歴",
+        title: "Who?",
         description:
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident porro optio obcaecati, qui placeat repudiandae, fugiat ab sapiente amet in ut quia quae suscipit id. Aperiam molestias libero quia esse!",
+          "都内に本社のあるIT企業に所属するエンジニア。開発が好き。ボードゲームが好き。",
       },
-      { title: "スキルセット", description: "React, TypeScript, Node.js" },
+      {
+        title: "GitHub",
+        description: "@tom-takeru",
+        url: "https://github.com/tom-takeru",
+      },
+      {
+        title: "Skills",
+        description:
+          "TypeScript / React / Next.js / Angular / ReactNative / Express / Java / Spring Boot / Ruby / Docker",
+      },
     ],
   },
   {
     name: "atok",
-    role: "Project Manager",
     imageUrl: "/background.jpeg",
     details: [
-      { title: "自己紹介", description: "Project Coordination" },
+      { title: "Role", description: "Project Coordination" },
       {
         title: "経歴",
         description: "Multiple cross-disciplinary projects",
@@ -48,10 +53,9 @@ const members: Member[] = [
   },
   {
     name: "kazukiiii",
-    role: "Marketer",
     imageUrl: "/background.jpeg",
     details: [
-      { title: "自己紹介", description: "Digital Marketing" },
+      { title: "Role", description: "Digital Marketing" },
       { title: "経歴", description: "SEO, PPC campaigns" },
       { title: "スキルセット", description: "Google Analytics, SEMrush" },
     ],
@@ -67,7 +71,7 @@ const MemberList: React.FC = () => {
         </h2>
       </div>
       <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-4">
-        {members.map((member, index) => (
+        {memberInformationList.map((member, index) => (
           <MemberCard key={index} member={member} />
         ))}
       </div>

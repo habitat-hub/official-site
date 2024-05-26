@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { Member } from "./MemberList";
+import { MemberInformation } from "./MemberList";
 
 type Props = {
-  member: Member;
+  member: MemberInformation;
 };
 
 const MemberCard = ({ member }: Props) => {
@@ -25,7 +25,18 @@ const MemberCard = ({ member }: Props) => {
         {member.details.map((detail, index) => (
           <div key={index}>
             <h4 className="font-bold text-light">{detail.title}</h4>
-            <p className="text-light">{detail.description}</p>
+            {detail.url ? (
+              <a
+                href={detail.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:underline"
+              >
+                {detail.description}
+              </a>
+            ) : (
+              <p className="text-light">{detail.description}</p>
+            )}
           </div>
         ))}
       </div>
