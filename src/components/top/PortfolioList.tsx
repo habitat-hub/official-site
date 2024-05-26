@@ -5,12 +5,12 @@ const PortfolioList: React.FC = () => {
   const portfolios = [
     {
       title: "Daydule",
-      imageUrl: "/daydule_icon.png",
+      imageUrl: "/portfolio/daydule/daydule_icon.png",
       href: "/portfolio/daydule",
     },
     {
       title: "Time is Money",
-      imageUrl: "/time-is-money_icon.png",
+      imageUrl: "/portfolio/time-is-money/time-is-money_icon.png",
       href: "/portfolio/time-is-money",
     },
     { title: "Coming Soon ...", imageUrl: "/background.jpeg" },
