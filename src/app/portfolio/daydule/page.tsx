@@ -9,10 +9,10 @@ export default function DaydulePortfolio() {
       siteUrl="https://daydule.habitat-hub.com/main"
       enabledDevice={["PC"]}
       siteImageUrls={[
-        "/daydule_site_1.png",
-        "/daydule_site_2.png",
-        "/daydule_site_3.png",
-        "/daydule_site_4.png",
+        "/portfolio/daydule/daydule_site_1.png",
+        "/portfolio/daydule/daydule_site_2.png",
+        "/portfolio/daydule/daydule_site_3.png",
+        "/portfolio/daydule/daydule_site_4.png",
       ]}
       description={`Dayduleは、TODOや予定をもとに自動でスケジュールを作成してくれるサイトです。<br/>
       必要な作業はTODOと予定の登録、そしてスケジュールボタンを押すだけ！<br/>
