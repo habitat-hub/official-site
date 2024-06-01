@@ -14,7 +14,7 @@ const GroupDescription: React.FC = () => {
       tl.fromTo(
         ".description__image",
         { scale: 1 },
-        { scale: 1, opacity: 0.75, duration: 0.8 }
+        { scale: 1, opacity: 0.75, duration: 1.1 }
       );
       tl.fromTo(
         ".description__heading",
