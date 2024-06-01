@@ -1,4 +1,8 @@
-import React from "react";
+"use client";
+import React, { useRef } from "react";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import MemberCard from "./MemberCard";
 
 export type MemberInformation = {
@@ -62,15 +66,40 @@ const memberInformationList: MemberInformation[] = [
   },
 ];
 
+const animateElement = (elementClass: string) => {
+  gsap.to(elementClass, {
+    opacity: 1,
+    scale: 1,
+    duration: 1,
+    scrollTrigger: {
+      trigger: elementClass,
+      start: "top 80%",
+      end: "top 50%",
+      scrub: true,
+      markers: false,
+    },
+  });
+};
+
 const MemberList: React.FC = () => {
+  gsap.registerPlugin(ScrollTrigger);
+  const container = useRef(null);
+  useGSAP(
+    () => {
+      animateElement(".members__heading");
+      animateElement(".members__body");
+    },
+    { scope: container }
+  );
+
   return (
-    <section className="p-8 bg-dark max-w-full">
+    <section className="p-8 bg-dark max-w-full" ref={container}>
       <div className="text-center">
-        <h2 className="font-fantasy text-3xl font-bold inline-block border-b border-current">
+        <h2 className="members__heading font-fantasy text-3xl font-bold inline-block border-b border-current opacity-0 scale-50">
           Members
         </h2>
       </div>
-      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="members__body mt-10 grid grid-cols-1 md:grid-cols-2 gap-4 opacity-0">
         {memberInformationList.map((member, index) => (
           <MemberCard key={index} member={member} />
         ))}
