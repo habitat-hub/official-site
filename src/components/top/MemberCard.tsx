@@ -35,7 +35,12 @@ const MemberCard = ({ member }: Props) => {
                 {detail.description}
               </a>
             ) : (
-              <p className="text-light">{detail.description}</p>
+              <div
+                className="text-light"
+                dangerouslySetInnerHTML={{
+                  __html: detail.description,
+                }}
+              />
             )}
           </div>
         ))}

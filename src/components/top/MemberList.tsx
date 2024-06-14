@@ -14,11 +14,24 @@ export type MemberInformation = {
 const memberInformationList: MemberInformation[] = [
   {
     name: "mellbrother",
-    imageUrl: "/background.jpeg",
+    imageUrl: "/memberImage/Mellbrother.jpeg",
     details: [
-      { title: "Role", description: "User Experience Design" },
-      { title: "経歴", description: "App redesign, Website overhaul" },
-      { title: "スキルセット", description: "Sketch, Figma, Adobe XD" },
+      { title: "Role", description: "Full Stack Developer / Project Manager" },
+      {
+        title: "Who?",
+        description:
+          "静岡でリモートワークしているエンジニア。<br/>趣味はキャンプ・ツーリング・ボドゲ。",
+      },
+      {
+        title: "GitHub",
+        description: "@Mellbrother",
+        url: "https://github.com/Mellbrother",
+      },
+      {
+        title: "Skills",
+        description:
+          "TypeScript / React / Next.js / NodeJS  / Express / ReactNative",
+      },
     ],
   },
   {
