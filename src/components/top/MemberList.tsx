@@ -58,14 +58,22 @@ const memberInformationList: MemberInformation[] = [
   },
   {
     name: "atok",
-    imageUrl: "/background.jpeg",
+    imageUrl: "/memberImage/atok.jpeg",
     details: [
-      { title: "Role", description: "Project Coordination" },
+      { title: "Role", description: "Full Stack Developer" },
       {
-        title: "経歴",
-        description: "Multiple cross-disciplinary projects",
+        title: "Who?",
+        description: "都内のIT企業に所属するエンジニア。辛い食べ物が好き。",
       },
-      { title: "スキルセット", description: "Jira, Trello, Slack" },
+      {
+        title: "GitHub",
+        description: "@atoook",
+        url: "https://github.com/atoook",
+      },
+      {
+        title: "Skills",
+        description: "TypeScript / React / Next.js / ReactNative / Java",
+      },
     ],
   },
   {
