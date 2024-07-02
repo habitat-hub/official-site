@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import Header from "../common/Header";
+import HeaderContainer from "../common/HeaderContainer";
 import Footer from "../common/Footer";
 import { FiExternalLink } from "react-icons/fi";
 
@@ -25,7 +25,7 @@ const PortfolioTemplate: React.FC<Props> = ({
 }) => {
   return (
     <>
-      <Header />
+      <HeaderContainer />
       <div className="bg-light-dark">
         <article className="container mx-auto md:p-9 p-6">
           {/* 見出し */}
