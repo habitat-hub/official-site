@@ -3,8 +3,8 @@ import React, { useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import MemberCardContainer from "./molecules/MemberCardContainer";
-import { MemberInformation } from "./molecules/ui/MemberCard";
+import { MemberInformation } from "../molecules/ui/MemberCard";
+import MemberList from "./ui/MemberList";
 
 const memberInformationList: MemberInformation[] = [
   {
@@ -97,7 +97,7 @@ const animateElement = (elementClass: string) => {
   });
 };
 
-const MemberList: React.FC = () => {
+const MemberListContainer: React.FC = () => {
   gsap.registerPlugin(ScrollTrigger);
   const container = useRef(null);
   useGSAP(
@@ -109,19 +109,12 @@ const MemberList: React.FC = () => {
   );
 
   return (
-    <section className="p-8 bg-dark max-w-full" ref={container}>
-      <div className="text-center">
-        <h2 className="members__heading font-fantasy text-3xl font-bold inline-block border-b border-current opacity-0 scale-50">
-          Members
-        </h2>
-      </div>
-      <div className="members__body mt-10 grid grid-cols-1 md:grid-cols-2 gap-4 opacity-0">
-        {memberInformationList.map((member, index) => (
-          <MemberCardContainer key={index} member={member} />
-        ))}
-      </div>
-    </section>
+    <MemberList
+      gsapRef={container}
+      title="Members"
+      memberInformationList={memberInformationList}
+    />
   );
 };
 
-export default MemberList;
+export default MemberListContainer;
