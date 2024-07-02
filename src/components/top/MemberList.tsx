@@ -3,13 +3,8 @@ import React, { useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import MemberCard from "./MemberCard";
-
-export type MemberInformation = {
-  name: string;
-  imageUrl: string;
-  details: { title: string; description: string; url?: string }[];
-};
+import MemberCardContainer from "./molecules/MemberCardContainer";
+import { MemberInformation } from "./molecules/ui/MemberCard";
 
 const memberInformationList: MemberInformation[] = [
   {
@@ -122,7 +117,7 @@ const MemberList: React.FC = () => {
       </div>
       <div className="members__body mt-10 grid grid-cols-1 md:grid-cols-2 gap-4 opacity-0">
         {memberInformationList.map((member, index) => (
-          <MemberCard key={index} member={member} />
+          <MemberCardContainer key={index} member={member} />
         ))}
       </div>
     </section>
