@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import HeaderContainer from "../common/HeaderContainer";
+import HeaderContainer from "../common/atoms/HeaderContainer";
 import Footer from "../common/Footer";
 import { FiExternalLink } from "react-icons/fi";
 

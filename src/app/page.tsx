@@ -3,7 +3,7 @@ import Layout from "./layout";
 import MemberList from "../components/top/MemberList";
 import PortfolioList from "../components/top/PortfolioList";
 import SnsList from "../components/top/SnsList";
-import HeaderContainer from "../components/common/HeaderContainer";
+import HeaderContainer from "../components/common/atoms/HeaderContainer";
 import Footer from "../components/common/Footer";
 
 export default function Home() {
