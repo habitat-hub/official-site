@@ -3,7 +3,7 @@
 import Image from "next/image";
 import React from "react";
 
-type HeaderProps = {
+type Props = {
   siteTitle: string;
   logo: {
     src: string;
@@ -14,7 +14,7 @@ type HeaderProps = {
   onLogoClick: () => void;
 };
 
-const Header: React.FC<HeaderProps> = ({ siteTitle, logo, onLogoClick }) => (
+const Header: React.FC<Props> = ({ siteTitle, logo, onLogoClick }) => (
   <header
     className="w-full p-4 flex md:justify-start items-center bg-dark cursor-pointer"
     onClick={onLogoClick}

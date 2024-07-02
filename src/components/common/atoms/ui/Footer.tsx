@@ -1,10 +1,10 @@
 import React from "react";
 
-type FooterProps = {
+type Props = {
   copyright: string;
 };
 
-const Footer: React.FC<FooterProps> = ({ copyright }) => {
+const Footer: React.FC<Props> = ({ copyright }) => {
   return (
     <footer className="w-full p-2 text-center text-sm bg-dark text-light">
       {copyright}
