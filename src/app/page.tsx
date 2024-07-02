@@ -2,7 +2,7 @@ import GroupDescription from "../components/top/GroupDescription";
 import Layout from "./layout";
 import MemberList from "../components/top/MemberList";
 import PortfolioList from "../components/top/PortfolioList";
-import SnsList from "../components/top/SnsList";
+import SnsListContainer from "../components/top/organisms/SnsListContainer";
 import HeaderContainer from "../components/common/atoms/HeaderContainer";
 import FooterContainer from "../components/common/atoms/FooterContainer";
 
@@ -13,7 +13,7 @@ export default function Home() {
       <GroupDescription />
       <PortfolioList />
       <MemberList />
-      <SnsList />
+      <SnsListContainer />
       <FooterContainer />
     </Layout>
   );
