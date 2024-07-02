@@ -4,7 +4,7 @@ import MemberList from "../components/top/MemberList";
 import PortfolioList from "../components/top/PortfolioList";
 import SnsList from "../components/top/SnsList";
 import HeaderContainer from "../components/common/atoms/HeaderContainer";
-import Footer from "../components/common/Footer";
+import FooterContainer from "../components/common/atoms/FooterContainer";
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
       <PortfolioList />
       <MemberList />
       <SnsList />
-      <Footer />
+      <FooterContainer />
     </Layout>
   );
 }

@@ -1,9 +1,13 @@
 import React from "react";
 
-const Footer: React.FC = () => {
+type FooterProps = {
+  copyright: string;
+};
+
+const Footer: React.FC<FooterProps> = ({ copyright }) => {
   return (
     <footer className="w-full p-2 text-center text-sm bg-dark text-light">
-      © Habitat Hub
+      {copyright}
     </footer>
   );
 };

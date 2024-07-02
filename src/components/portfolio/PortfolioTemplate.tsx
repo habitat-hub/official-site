@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import HeaderContainer from "../common/atoms/HeaderContainer";
-import Footer from "../common/Footer";
+import FooterContainer from "../common/atoms/FooterContainer";
 import { FiExternalLink } from "react-icons/fi";
 
 interface Props {
@@ -106,7 +106,7 @@ const PortfolioTemplate: React.FC<Props> = ({
           </div>
         </article>
       </div>
-      <Footer />
+      <FooterContainer />
     </>
   );
 };
