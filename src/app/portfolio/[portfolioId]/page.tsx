@@ -1,6 +1,17 @@
-import PortfolioTemplate from "@/components/portfolio/PortfolioTemplate";
+import PortfolioTemplate from "@/components/portfolio/organisms/ui/PortfolioTemplate";
+import { constant } from "../constant";
 
-export default function DaydulePortfolio() {
+export default function Portfolio({
+  params,
+}: {
+  params: { portfolioId: string };
+}) {
+  const portfolioContent = constant[params.portfolioId];
+
+  if (!portfolioContent) {
+    return <div>Not Found</div>;
+  }
+
   return (
     <PortfolioTemplate
       mainVisualUrl="/portfolio/daydule/daydule_home.png"
