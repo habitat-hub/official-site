@@ -1,6 +1,6 @@
-import { PortfolioProps } from "@/components/portfolio/organisms/ui/PortfolioTemplate";
+import { Portfolio } from "./organisms/ui/PortfolioTemplate";
 
-export const constant: Record<string, PortfolioProps> = {
+export const constant: Record<string, Portfolio> = {
   daydule: {
     mainVisualUrl: "/portfolio/daydule/daydule_home.png",
     title: "Daydule",

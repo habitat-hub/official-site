@@ -1,5 +1,7 @@
 import PortfolioTemplate from "@/components/portfolio/organisms/ui/PortfolioTemplate";
-import { constant } from "../constant";
+import HeaderContainer from "@/components/common/organisms/HeaderContainer";
+import FooterContainer from "@/components/common/atoms/FooterContainer";
+import { constant } from "@/components/portfolio/constant";
 
 export const runtime = "edge";
 export default function Portfolio({
@@ -7,21 +9,16 @@ export default function Portfolio({
 }: {
   params: { portfolioId: string };
 }) {
-  const portfolioContent = constant[params.portfolioId];
-
-  if (!portfolioContent) {
+  const hasPortfolio = Object.keys(constant).includes(params.portfolioId);
+  if (!hasPortfolio) {
     return <div>Not Found</div>;
   }
 
   return (
-    <PortfolioTemplate
-      mainVisualUrl={portfolioContent.mainVisualUrl}
-      title={portfolioContent.title}
-      releaseDate={portfolioContent.releaseDate}
-      siteUrl={portfolioContent.siteUrl}
-      enabledDevice={portfolioContent.enabledDevice}
-      siteImageUrls={portfolioContent.siteImageUrls}
-      description={portfolioContent.description}
-    />
+    <>
+      <HeaderContainer />
+      <PortfolioTemplate portfolioId={params.portfolioId} />
+      <FooterContainer />
+    </>
   );
 }
