@@ -1,5 +1,5 @@
 import HeaderContainer from "@/components/common/organisms/HeaderContainer";
-import FooterContainer from "@/components/common/atoms/FooterContainer";
+import FooterContainer from "@/components/common/organisms/FooterContainer";
 import { constant } from "@/components/portfolio/constant";
 import PortfolioTemplate from "@/components/portfolio/templates/PortfolioTemplate";
 
