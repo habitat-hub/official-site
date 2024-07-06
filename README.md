@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## 概要
 
-## Getting Started
+Habitat Hub 公式サイト
 
-First, run the development server:
+https://www.habitat-hub.com/
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 実装ルール
+
+### ディレクトリ構造
+
+```
+./src
+├── app
+│   ├── page.tsx // domain1
+│   └── portfolio // domain2
+│       └── [portfolioId]
+│           └── page.tsx
+├── components
+│   ├── common // 共通コンポーネント
+│   │   ├── atoms
+│   │   │   ├── AaaContainer.tsx
+│   │   │   ├── Bbb1Container.tsx
+│   │   │   ├── Bbb2Container.tsx // 一つのuiコンポーネントに対して複数のコンテナはOK
+│   │   │   └── ui
+│   │   │       ├── Aaa.tsx
+│   │   │       └── Bbb.tsx
+│   │   └── molecules
+│   │   │   └── ... // atomsと同じ
+│   │   └── organisms
+│   │   │   └── ... // atomsと同じ
+│   ├── domain1
+│   │   └── ... // commonと同じ
+│   │   └── templates
+│   │       └── domain1Template.tsx
+│   └── domain2
+│       └── ... // commonと同じ
+│       └── templates
+│           ├── domain2-1Template.tsx
+│           └── domain2-2Template.tsx // ページ的には一緒だが、テンプレートにパターンを持たせたい場合などは、複数作成することも可
+└── utils
+    └── aaaUtil.ts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### container コンポーネントに関するのルール
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+#### ルール
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- ui に対応する container コンポーネントは基本的に最低一つ用意する
+  - props を横流しするだけの場合のみ、省略可能
+  - props 以外の設定値などがあったり、ロジックが入る場合は、container を必ず作成すること
+- 1-a の例外を除き、ui コンポーネントは直接呼び出さず、container コンポーネント越しに利用する
 
-## Learn More
+#### 理由
 
-To learn more about Next.js, take a look at the following resources:
+- 作らなかったりすると、ui と container のどちらを使うべきかの判断に迷うため
+- ui コンポーネントを呼び出せるようにした場合、親の ui コンポーネントにロジックが含まれたり、設定値の加工処理などが入ったりと、親の ui コンポーネントに本来の役割以上のコードを持たせることにつながってしまうため
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 各ディレクトリの説明
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+| ディレクトリ名 | 説明                                                                                                                                                      | 備考                                                              |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- | --- | --------- | ----------------------------------------------------------------------------------------- | --- |
+| atoms          | 他のコンポーネントを含まないコンポーネント                                                                                                                | ちょっとしたアイコンのようなものなどは、許容                      |
+| molecules      | 複数のコンポーネントを含むコンポーネント<br/>ドメイン上の意味を持たないコンポーネントの塊                                                                 | 〇〇エリアの一部、みたいなものはここ <br/> 〇〇エリアは organisms |
+| organisms      | 複数のコンポーネントを含むコンポーネント <br/> ドメイン上の意味を持つコンポーネントの塊                                                                   |                                                                   |     | templates | ページを構成するコンポーネントをまとめたコンポーネント <br/> api 通信などは基本ここで行う |     |
+| app/page.tsx   | ページ外の共通パーツ適用、メタタグなどのようなパーツ外の設定などをを行う <br/> ページ内コンテンツに関する処理はここには書かない（それは template に書く） |                                                                   |
+|                |                                                                                                                                                           |
 
-## Deploy on Vercel
+## 参考
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[Container/Presentational パターン再入門](https://zenn.dev/buyselltech/articles/9460c75b7cd8d1)
