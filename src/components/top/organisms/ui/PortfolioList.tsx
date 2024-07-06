@@ -1,7 +1,6 @@
 import React from "react";
 
-import PortfolioContainer from "../../molecules/PortfolioContainer";
-import { PortfolioProps } from "../../molecules/ui/Portfolio";
+import Portfolio, { PortfolioProps } from "../../molecules/ui/Portfolio";
 
 type Props = {
   gsapRef: React.MutableRefObject<null>;
@@ -20,7 +19,7 @@ const PortfolioList: React.FC<Props> = ({ gsapRef, title, portfolios }) => (
     </div>
     <div className="portfolio__body grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6 opacity-0">
       {portfolios.map((portfolio, index) => (
-        <PortfolioContainer key={`Portfolio_${index}`} {...portfolio} />
+        <Portfolio key={`Portfolio_${index}`} {...portfolio} />
       ))}
     </div>
   </section>
