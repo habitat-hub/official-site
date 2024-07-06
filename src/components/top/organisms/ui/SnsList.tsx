@@ -8,12 +8,12 @@ export interface SnsButton {
   url: string;
 }
 
-type SnsListProps = {
+type Props = {
   title: string;
   buttons: SnsButton[];
 };
 
-const SnsList: React.FC<SnsListProps> = ({ title, buttons }) => (
+const SnsList: React.FC<Props> = ({ title, buttons }) => (
   <section className="p-8 bg-light-dark text-light flex flex-col items-center">
     <div className="text-center">
       <h2 className="text-2xl mb-[3px]">{title}</h2>
