@@ -42,8 +42,10 @@ const PortfolioTemplate: React.FC<Props> = ({
               <Image
                 src={mainVisualUrl}
                 alt={title + " メインビジュアル"}
-                layout="fill"
-                objectFit="contain"
+                fill
+                style={{
+                  objectFit: "contain",
+                }}
                 className="transition-transform duration-300 ease-in-out group-hover:scale-105"
               />
             </div>
@@ -87,8 +89,10 @@ const PortfolioTemplate: React.FC<Props> = ({
                   <Image
                     src={imageUrl}
                     alt={title + ` スクリーンショット${index + 1}`}
-                    layout="fill"
-                    objectFit="contain"
+                    fill
+                    style={{
+                      objectFit: "contain",
+                    }}
                     className="transition-transform duration-300 ease-in-out group-hover:scale-105"
                   />
                 </div>

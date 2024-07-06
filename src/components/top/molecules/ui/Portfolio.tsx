@@ -16,8 +16,10 @@ const Portfolio: React.FC<PortfolioProps> = ({ title, imageUrl, href }) => (
     <Image
       src={imageUrl}
       alt={title}
-      layout="fill"
-      objectFit="cover"
+      fill
+      style={{
+        objectFit: "cover",
+      }}
       className="transition-transform duration-300 ease-in-out group-hover:scale-105"
     />
     <div className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">

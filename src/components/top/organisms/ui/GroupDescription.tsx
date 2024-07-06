@@ -16,7 +16,11 @@ const GroupDescription: React.FC<Props> = ({ gsapRef, title, description }) => (
     <Image
       src="/background.jpeg"
       alt="Background"
-      layout="fill"
+      fill
+      style={{
+        objectFit: "cover",
+      }}
+      priority={true}
       className="description__image w-full h-full object-cover opacity-30"
     />
     <div className="absolute top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 flex flex-col justify-center items-center p-8">
