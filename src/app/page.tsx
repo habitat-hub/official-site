@@ -5,10 +5,10 @@ import TopTemplate from "@/components/top/templates/TopTemplate";
 
 export default function Home() {
   return (
-    <Layout>
+    <>
       <HeaderContainer />
       <TopTemplate />
       <FooterContainer />
-    </Layout>
+    </>
   );
 }
