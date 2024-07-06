@@ -8,10 +8,10 @@ const HeaderContainer: React.FC = () => {
   const router = useRouter();
 
   const logo = {
-    src: "/logo.jpg",
+    src: "/logo.svg",
     alt: "Habitat Hub Logo",
-    width: 25,
-    height: 25,
+    width: 30,
+    height: 30,
   };
   const onLogoClick = () => router.push("/");
 

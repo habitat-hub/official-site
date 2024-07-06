@@ -1,12 +1,17 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Favicon from "../../public/logo.svg";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Habitat-Hub",
+  title: {
+    template: "%s | Habitat Hub",
+    default: "Habitat Hub",
+  },
   description: "Explore the projects and our activities.",
+  icons: [{ rel: "icon", url: Favicon.src }],
 };
 
 export default function Layout({
