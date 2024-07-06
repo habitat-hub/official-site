@@ -13,6 +13,9 @@ const config: Config = {
         "light-dark": "#242629",
         light: "#dedede",
       },
+      fontFamily: {
+        caveat: ["var(--font-caveat)"],
+      },
     },
   },
   plugins: [],

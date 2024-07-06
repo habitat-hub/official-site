@@ -25,7 +25,7 @@ const Header: React.FC<Props> = ({ siteTitle, logo, onLogoClick }) => (
       className="object-cover opacity-75 mr-[10px]"
     />
     <div className="text-center md:text-left">
-      <h1 className="font-fantasy text-lg md:text-xl">{siteTitle}</h1>
+      <h1 className="font-caveat text-2xl md:text-3xl">{siteTitle}</h1>
     </div>
   </header>
 );
