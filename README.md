@@ -44,7 +44,7 @@ Atomic Design、Container/Presentationalパターンを参考に実装を行う
     └── aaaUtil.ts
 ```
 
-# container コンポーネントに関するのルール
+# container コンポーネントに関するルール
 
 ### ルール
 
@@ -57,7 +57,7 @@ Atomic Design、Container/Presentationalパターンを参考に実装を行う
 - 作らなかったりすると、ui と container のどちらを使うべきかの判断に迷うため
 - ui コンポーネントを呼び出せるようにした場合、親の ui コンポーネントにロジックが含まれたり、設定値の加工処理などが入ったりと、親の ui コンポーネントに本来の役割以上のコードを持たせることにつながってしまうため
 
-# ui コンポーネントに関するのルール
+# ui コンポーネントに関するルール
 
 ### ルール
 
