@@ -10,8 +10,8 @@ https://www.habitat-hub.com/
 ./src
 ├── app
 │   ├── page.tsx // domain1
-│   └── portfolio // domain2
-│       └── [portfolioId]
+│   └── domain2 // domain2
+│       └── [domain2Id]
 │           └── page.tsx
 ├── components
 │   ├── common // 共通コンポーネント
