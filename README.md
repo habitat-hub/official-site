@@ -25,7 +25,7 @@ https://www.habitat-hub.com/
 │   │   └── molecules
 │   │   │   └── ... // atomsと同じ
 │   │   └── organisms
-│   │   │   └── ... // atomsと同じ
+│   │       └── ... // atomsと同じ
 │   ├── domain1
 │   │   └── ... // commonと同じ
 │   │   └── templates
@@ -35,6 +35,8 @@ https://www.habitat-hub.com/
 │       └── templates
 │           ├── domain2-1Template.tsx
 │           └── domain2-2Template.tsx // ページ的には一緒だが、テンプレートにパターンを持たせたい場合などは、複数作成することも可
+│── hooks
+│   └── useAaa.ts
 └── utils
     └── aaaUtil.ts
 ```
