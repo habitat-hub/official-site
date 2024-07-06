@@ -28,10 +28,7 @@ const GroupDescriptionContainer: React.FC = () => {
   );
 
   const title = "Habitat Hub とは";
-  const description = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
-  possimus in vero fugit provident dolorum ullam necessitatibus nesciunt
-  voluptas tenetur laborum tempora, error ab eaque. Maxime et dicta
-  cupiditate dolorum.`;
+  const description = `Habitat Hubは、エンジニアとして働く4人のメンバーによるチームです。Webサイトやアプリの開発を手掛け、QiitaなどでIT関連の記事の投稿を行なっています。私たちの活動方針は、世の中の人々にちょっとした喜びを与え、世の中をより便利にすることです。IT技術を通じて日常にささやかな幸せを届け、より豊かな生活をサポートします。`;
   return (
     <GroupDescription
       gsapRef={container}
