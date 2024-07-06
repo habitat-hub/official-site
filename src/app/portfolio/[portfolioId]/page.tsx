@@ -1,7 +1,7 @@
-import PortfolioTemplate from "@/components/portfolio/organisms/ui/PortfolioTemplate";
 import HeaderContainer from "@/components/common/organisms/HeaderContainer";
 import FooterContainer from "@/components/common/atoms/FooterContainer";
 import { constant } from "@/components/portfolio/constant";
+import PortfolioTemplate from "@/components/portfolio/templates/PortfolioTemplate";
 
 export const runtime = "edge";
 export default function Portfolio({

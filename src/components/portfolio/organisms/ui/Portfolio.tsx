@@ -1,7 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import HeaderContainer from "../../../common/organisms/HeaderContainer";
-import FooterContainer from "../../../common/atoms/FooterContainer";
 import { FiExternalLink } from "react-icons/fi";
 import { constant } from "@/components/portfolio/constant";
 
@@ -19,7 +17,7 @@ export interface Portfolio {
   description: string;
 }
 
-const PortfolioTemplate: React.FC<Props> = ({ portfolioId }) => {
+const Portfolio: React.FC<Props> = ({ portfolioId }) => {
   const portfolioContent = constant[portfolioId];
 
   return (
@@ -121,4 +119,4 @@ const PortfolioTemplate: React.FC<Props> = ({ portfolioId }) => {
     </>
   );
 };
-export default PortfolioTemplate;
+export default Portfolio;

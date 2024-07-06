@@ -1,4 +1,4 @@
-import { Portfolio } from "./organisms/ui/PortfolioTemplate";
+import { Portfolio } from "./organisms/ui/Portfolio";
 
 export const constant: Record<string, Portfolio> = {
   daydule: {
