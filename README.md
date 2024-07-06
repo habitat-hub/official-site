@@ -32,12 +32,12 @@ Atomic Design、Container/Presentationalパターンを参考に実装を行う
 │   ├── domain1
 │   │   └── ... // commonと同じ
 │   │   └── templates
-│   │       └── domain1Template.tsx
+│   │       └── Domain1Template.tsx
 │   └── domain2
 │       └── ... // commonと同じ
 │       └── templates
-│           ├── domain2-1Template.tsx
-│           └── domain2-2Template.tsx // ページ的には一緒だが、テンプレートにパターンを持たせたい場合などは、複数作成することも可
+│           ├── Domain2-1Template.tsx
+│           └── Domain2-2Template.tsx // ページ的には一緒だが、テンプレートにパターンを持たせたい場合などは、複数作成することも可
 │── hooks
 │   └── useAaa.ts
 └── utils
