@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Favicon from "../../public/logo.svg";
 import { caveat } from "../utils/font";
+import HeaderContainer from "@/components/common/organisms/HeaderContainer";
+import FooterContainer from "@/components/common/atoms/FooterContainer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +24,11 @@ export default function Layout({
 }>) {
   return (
     <html lang="ja" className={`${caveat.variable}`}>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <HeaderContainer />
+        {children}
+        <FooterContainer />
+      </body>
     </html>
   );
 }

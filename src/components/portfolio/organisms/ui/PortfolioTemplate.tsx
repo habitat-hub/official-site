@@ -1,7 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import HeaderContainer from "../../../common/organisms/HeaderContainer";
-import FooterContainer from "../../../common/atoms/FooterContainer";
 import { FiExternalLink } from "react-icons/fi";
 
 export interface PortfolioProps {
@@ -24,7 +22,6 @@ const PortfolioTemplate: React.FC<PortfolioProps> = ({
   description,
 }) => (
   <>
-    <HeaderContainer />
     <div className="bg-light-dark">
       <article className="container mx-auto md:p-9 p-6">
         {/* 見出し */}
@@ -109,7 +106,6 @@ const PortfolioTemplate: React.FC<PortfolioProps> = ({
         </div>
       </article>
     </div>
-    <FooterContainer />
   </>
 );
 
