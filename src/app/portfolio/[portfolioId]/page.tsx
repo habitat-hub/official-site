@@ -1,6 +1,7 @@
 import PortfolioTemplate from "@/components/portfolio/organisms/ui/PortfolioTemplate";
 import { constant } from "../constant";
 
+export const runtime = "edge";
 export default function Portfolio({
   params,
 }: {
