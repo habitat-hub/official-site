@@ -11,10 +11,15 @@ export interface SnsButton {
 type Props = {
   title: string;
   buttons: SnsButton[];
+  hasQiitaPosts: boolean;
 };
 
-const SnsList: React.FC<Props> = ({ title, buttons }) => (
-  <section className="p-8 bg-light-dark text-light flex flex-col items-center">
+const SnsList: React.FC<Props> = ({ title, buttons, hasQiitaPosts }) => (
+  <section
+    className={`p-8 ${
+      hasQiitaPosts ? "bg-dark" : "bg-light-dark"
+    } text-light flex flex-col items-center`}
+  >
     <div className="text-center">
       <h2 className="text-2xl mb-[3px]">{title}</h2>
       <div className="w-full border-b-2 border-light mb-10"></div>
