@@ -1,13 +1,12 @@
 import Image from "next/image";
 import React from "react";
-import { FiExternalLink } from "react-icons/fi";
 import { Portfolio } from "../../types";
 
-type Props = {
+export type SiteDetailProps = {
   portfolioContent: Portfolio;
 };
 
-const SiteDetail: React.FC<Props> = ({ portfolioContent }) => (
+const SiteDetail: React.FC<SiteDetailProps> = ({ portfolioContent }) => (
   <div className="max-w-2xl mx-auto">
     {/* サイト画像 */}
     <div className="md:mb-9 mb-6">

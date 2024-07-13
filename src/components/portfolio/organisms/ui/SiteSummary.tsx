@@ -3,11 +3,11 @@ import React from "react";
 import { FiExternalLink } from "react-icons/fi";
 import { Portfolio } from "../../types";
 
-type Props = {
+export type SiteSummaryProps = {
   portfolioContent: Portfolio;
 };
 
-const SiteSummary: React.FC<Props> = ({ portfolioContent }) => (
+const SiteSummary: React.FC<SiteSummaryProps> = ({ portfolioContent }) => (
   <div className="max-w-3xl mx-auto">
     {/* メインビジュアル */}
     <div className="w-full md:h-[400px] h-52 relative md:mb-9 mb-6">

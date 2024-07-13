@@ -1,8 +1,8 @@
 import React from "react";
 import { constant } from "../constant";
-import SiteSummary from "../organisms/ui/SiteSummary";
-import SiteDetail from "../organisms/ui/SiteDetail";
 import HeadingContainer from "../atoms/HeadingContainer";
+import SiteSummaryContainer from "../organisms/SiteSummaryContainer";
+import SiteDetailContainer from "../organisms/SiteDetailContainer";
 
 type Props = {
   portfolioId: string;
@@ -16,8 +16,8 @@ const PortfolioTemplate: React.FC<Props> = ({ portfolioId }) => {
       <div className="bg-light-dark">
         <article className="container mx-auto md:p-9 p-6">
           <HeadingContainer />
-          <SiteSummary portfolioContent={portfolioContent} />
-          <SiteDetail portfolioContent={portfolioContent} />
+          <SiteSummaryContainer portfolioContent={portfolioContent} />
+          <SiteDetailContainer portfolioContent={portfolioContent} />
         </article>
       </div>
     </>

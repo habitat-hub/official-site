@@ -6,11 +6,11 @@ export type MemberInformation = {
   details: { title: string; description: string; url?: string }[];
 };
 
-type Props = {
+export type MemberCardProps = {
   member: MemberInformation;
 };
 
-const MemberCard = ({ member }: Props) => (
+const MemberCard = ({ member }: MemberCardProps) => (
   <div className="border-[0.5px] border-t-[12px] rounded-lg border-light p-6 flex flex-col md:flex-row md:items-center">
     <div className="flex flex-col items-center mb-4 md:mb-0">
       <Image

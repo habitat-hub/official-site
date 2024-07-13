@@ -1,5 +1,6 @@
 import React from "react";
-import MemberCard, { MemberInformation } from "../../molecules/ui/MemberCard";
+import { MemberInformation } from "../../molecules/ui/MemberCard";
+import MemberCardContainer from "../../molecules/MemberCardContainer";
 
 type Props = {
   gsapRef: React.MutableRefObject<null>;
@@ -20,7 +21,7 @@ const MemberList: React.FC<Props> = ({
     </div>
     <div className="members__body mt-10 grid grid-cols-1 md:grid-cols-2 gap-4 opacity-0">
       {memberInformationList.map((member, index) => (
-        <MemberCard key={index} member={member} />
+        <MemberCardContainer key={index} member={member} />
       ))}
     </div>
   </section>
