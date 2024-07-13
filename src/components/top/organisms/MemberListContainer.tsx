@@ -72,12 +72,25 @@ const memberInformationList: MemberInformation[] = [
     ],
   },
   {
-    name: "kazukiiii",
-    imageUrl: "/background.jpeg",
+    name: "kzk",
+    imageUrl: "/memberImage/kzk.png",
     details: [
-      { title: "Role", description: "Digital Marketing" },
-      { title: "経歴", description: "SEO, PPC campaigns" },
-      { title: "スキルセット", description: "Google Analytics, SEMrush" },
+      { title: "Role", description: "Frontend Developer" },
+      {
+        title: "Who?",
+        description:
+          "都内に本社のあるIT企業に所属するエンジニア。MARVELと散歩が好き。",
+      },
+      {
+        title: "GitHub",
+        description: "@kzk27",
+        url: "https://github.com/kzk27",
+      },
+      {
+        title: "Skills",
+        description:
+          "HTML / CSS / JavaScript / TypeScript / React / Next.js / ReactNative",
+      },
     ],
   },
 ];
