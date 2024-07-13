@@ -7,7 +7,9 @@ const useQiitaPosts = () => {
   const [qiitaPosts, setQiitaPosts] = useState<ParsedQiitaPost[]>([]);
 
   useEffect(() => {
-    const fetchQiitaPosts = async (token: string) => {
+    const fetchQiitaPosts = async (token?: string) => {
+      if (!token) return [];
+
       try {
         const response = await fetch(
           "https://qiita.com/api/v2/authenticated_user/items",
@@ -16,23 +18,25 @@ const useQiitaPosts = () => {
             headers: { Authorization: `Bearer ${token}` },
           }
         );
+        if (!response.ok) {
+          throw new Error("Failed to fetch Qiita posts");
+        }
         const data: QiitaPostResponse[] = await response.json();
         return parseQiitaPosts(data);
       } catch (error) {
-        console.error("Error fetching Qiita posts:", error);
         return [];
       }
     };
 
     const fetchData = async () => {
       const combinedData: ParsedQiitaPost[] = [];
-      for (const token of QIITA_USER_TOKENS) {
-        if (token) {
-          const data = await fetchQiitaPosts(token);
-          combinedData.push(...data);
-        }
-      }
+      const result = await Promise.all(
+        QIITA_USER_TOKENS.map((token) => fetchQiitaPosts(token))
+      );
 
+      result.forEach((data) => {
+        combinedData.push(...data);
+      });
       combinedData.sort(
         (a, b) =>
           new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
