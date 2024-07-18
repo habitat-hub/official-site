@@ -29,9 +29,7 @@ Atomic Design、Container/Presentationalパターンを参考に実装を行う
     │   │── molecules
     │   │   └── ... // atomsと同じ
     │   │── organisms
-    │   │   ├── container と ui はatomsと同じ
-    │   │   └── layout
-    │   │       └── AaaLayout.tsx // 複数のコンポーネントを囲んだ部分にスタイルを当てたい時などに利用する
+    │   │   └── ... // atomsと同じ
     │   │── hooks
     │   │   └── useAaa.ts
     │   └── utils
@@ -39,17 +37,12 @@ Atomic Design、Container/Presentationalパターンを参考に実装を行う
     ├── domain1
     │   │── ... // commonと同じ
     │   └── templates
-    │       │── Domain1Template.tsx
-    │       └── layout
-    │           └── AaaLayout.tsx // 複数のコンポーネントを囲んだ部分にスタイルを当てたい時などに利用する
+    │       └── Domain1Template.tsx
     └── domain2
         │── ... // commonと同じ
         └── templates
             ├── Domain2-1Template.tsx
-            │── Domain2-2Template.tsx // ページ的には一緒だが、テンプレートにパターンを持たせたい場合などは、複数作成することもOK
-            └── layout
-                │── Domain2-1Layout.tsx
-                └── Domain2-2Layout.tsx // 複数作ってもOK
+            └── Domain2-2Template.tsx // ページ的には一緒だが、テンプレートにパターンを持たせたい場合などは、複数作成することもOK
 ```
 
 # container コンポーネントに関するルール
@@ -74,25 +67,15 @@ Atomic Design、Container/Presentationalパターンを参考に実装を行う
 
 - uiに関する関心ごとのみ取り扱うようにするため
 
-# layout コンポーネントに関するルール
-
-### ルール
-
-- childrenの外側のレイアウトを定義するコンポーネントはlayoutフォルダに定義する
-
-### 理由
-
-- uiパーツとは若干毛色が異なり、別管理の方が見やすいため
-
 # 各ディレクトリの説明
 
 | ディレクトリ名 | 説明 | 備考 |
 |:---|:---|:---|
 | atoms | 他のコンポーネントを含まないコンポーネント | ちょっとしたアイコンのようなものなどは、許容 |
 | molecules | 複数のコンポーネントを含むコンポーネント <br/> ドメイン上の意味を持たないコンポーネントの塊  | 〇〇エリアの一部、みたいなものはここ <br/> 〇〇エリアは organisms | | 
-| organisms | 複数のコンポーネントを含むコンポーネント <br/> ドメイン上の意味を持つコンポーネントの塊 | copyrightのみを表示しているフッターなどドメイン的な意味はあるが、atomレベルのコンポーネントの場合、こちらに入れることとする <br/> layout系の処理はlayoutコンポーネントに分離する |
-| templates | ページを構成するコンポーネントをまとめたコンポーネント <br/> api 通信などは基本ここで行う | 基本的にはorganismsコンポーネントの集まりとなる想定 <br/> layout系の処理はlayoutコンポーネントに分離する |
-| app/page.tsx | ページ内コンテンツ以外の共通パーツの適用、メタタグのようなコンテンツ外の設定などをを行う | ページ内コンテンツに関する処理はここには書かない（それは template に書く）<br/> pageレベルのlayout系の処理はlayout.tsxに記載する |
+| organisms | 複数のコンポーネントを含むコンポーネント <br/> ドメイン上の意味を持つコンポーネントの塊 | copyrightのみを表示しているフッターなどドメイン的な意味はあるが、atomレベルのコンポーネントの場合、こちらに入れることとする |
+| templates | ページを構成するコンポーネントをまとめたコンポーネント <br/> api 通信などは基本ここで行う | 基本的にはorganismsコンポーネントの集まりとなる想定 |
+| app/page.tsx | ページ内コンテンツ以外の共通パーツの適用、メタタグのようなコンテンツ外の設定などをを行う | ページ内コンテンツに関する処理はここには書かない（それは template に書く） |
 
 # 参考
 
