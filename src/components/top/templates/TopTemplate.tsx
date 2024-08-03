@@ -15,7 +15,6 @@ const TopTemplate: React.FC = () => {
       <GroupDescriptionContainer />
       <PortfolioListContainer />
       <MemberListContainer />
-      {/* TODO: cloudflarePageで定数ファイルを定義する */}
       {hasQiitaPosts && <QiitaPostsContainer qiitaPosts={qiitaPosts} />}
       <SnsListContainer hasQiitaPosts={hasQiitaPosts} />
     </>
