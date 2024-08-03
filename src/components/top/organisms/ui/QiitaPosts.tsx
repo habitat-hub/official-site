@@ -12,7 +12,7 @@ const QiitaPosts: React.FC<Props> = ({ title, qiitaPosts }) => (
     <div className="text-center">
       <h2 className="font-fantasy text-2xl font-bold text-light">
         <span className="inline-block border-b-2 border-white pb-2.5">
-          Qiita の記事
+          {title}
         </span>
       </h2>
     </div>
