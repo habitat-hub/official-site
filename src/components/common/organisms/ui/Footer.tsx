@@ -6,7 +6,7 @@ type Props = {
 
 const Footer: React.FC<Props> = ({ copyright }) => {
   return (
-    <footer className="w-full p-2 text-center text-sm bg-dark text-light">
+    <footer className="w-full p-2 text-center text-sm text-light">
       {copyright}
     </footer>
   );
