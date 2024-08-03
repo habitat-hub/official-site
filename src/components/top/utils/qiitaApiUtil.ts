@@ -1,4 +1,3 @@
-"use server";
 import { QIITA_USER_TOKENS } from "@/config";
 import { QiitaPostResponse } from "../type";
 import { JSDOM } from "jsdom";
