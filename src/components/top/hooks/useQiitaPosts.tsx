@@ -48,7 +48,7 @@ const useQiitaPosts = () => {
     fetchData();
   }, []);
 
-  return { qiitaPosts };
+  return { qiitaPosts, hasQiitaPosts: qiitaPosts.length > 0 };
 };
 
 export default useQiitaPosts;
