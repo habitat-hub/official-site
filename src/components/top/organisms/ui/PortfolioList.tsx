@@ -18,9 +18,11 @@ const PortfolioList: React.FC<Props> = ({ gsapRef, title, portfolios }) => (
         </span>
       </h2>
     </div>
-    <div className="portfolio__body grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6 opacity-0">
+    <div className="portfolio__body grid grid-cols-2 gap-8 md:grid-cols-5 md:gap-12 opacity-0">
       {portfolios.map((portfolio, index) => (
-        <PortfolioContainer key={`Portfolio_${index}`} {...portfolio} />
+        <div key={`Portfolio_${portfolio.title}`} className="max-w-80 max-h-80">
+          <PortfolioContainer {...portfolio} />
+        </div>
       ))}
     </div>
   </section>
