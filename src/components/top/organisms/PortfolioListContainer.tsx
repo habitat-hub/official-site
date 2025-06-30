@@ -18,17 +18,30 @@ const PortfolioListContainer: React.FC = () => {
 
   const portfolios = [
     {
-      title: "Daydule",
-      imageUrl: "/portfolio/daydule/daydule_icon.png",
-      href: "/portfolio/daydule",
+      title: "Kibako（ボードゲーム作成サイト）",
+      imageUrl: "/portfolio/kibako/kibako_icon.png",
+      href: "/portfolio/kibako",
+    },
+    {
+      title: "株式会社MEISHOのHP作成",
+      imageUrl: "/background.jpeg",
+      href: "/portfolio/meisho",
+    },
+    {
+      title: "AI DISCUSSION",
+      imageUrl: "/portfolio/ai-discussion/ai-discussion_icon.png",
+      href: "/portfolio/ai-discussion",
     },
     {
       title: "Time is Money",
       imageUrl: "/portfolio/time-is-money/time-is-money_icon.png",
       href: "/portfolio/time-is-money",
     },
-    { title: "Coming Soon ...", imageUrl: "/background.jpeg" },
-    { title: "Coming Soon ...", imageUrl: "/background.jpeg" },
+    {
+      title: "Daydule",
+      imageUrl: "/portfolio/daydule/daydule_icon.png",
+      href: "/portfolio/daydule",
+    },
   ];
 
   return (
